@@ -1,4 +1,8 @@
+def awsCredentials = [[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'aws-personal']]
 pipeline {
+    options {
+  withCredentials(awsCredentials)
+}
     environment{
     registryCredential = 'spiner-dockerhub'
     }
