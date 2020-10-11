@@ -33,6 +33,7 @@ pipeline {
                 sh 'terraform apply'
                 }
                     }
+                }
             }
         }
     }
