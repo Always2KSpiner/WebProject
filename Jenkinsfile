@@ -25,8 +25,9 @@ pipeline {
         stage('AWS Deployment'){
             agent any
             steps{
-                sh 'cd TerraformScripts'
+                dir('TerraformScripts'){
                 sh 'pwd'
+                }
             }
         }
     }
