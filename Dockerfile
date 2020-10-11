@@ -5,6 +5,5 @@ WORKDIR /project
 
 RUN npm install
 RUN npm build
-RUN node app.js
 
 EXPOSE 3000
