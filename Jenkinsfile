@@ -30,7 +30,7 @@ pipeline {
                     withCredentials(awsCredentials){
                 dir('TerraformScripts'){
                 sh 'terraform init'
-                sh 'terraform apply -y'
+                sh 'terraform apply -auto-approve'
                 }
                     }
                 }
