@@ -4,7 +4,7 @@ pipeline {
     }
     agent none
     stages {
-        stage('Build') {
+        /*stage('Build') {
             agent { dockerfile true }
             steps {
                 sh 'pwd'
@@ -18,8 +18,15 @@ pipeline {
        docker.withRegistry( '', registryCredential ){
             def customImage = docker.build("always2kspiner/webproject:${env.BUILD_ID}")
             customImage.push()
-                    }    
+                    }   
                 }
+            }
+        }*/
+        stage('AWS Deployment'){
+            agent any
+            steps{
+                sh 'cd TerraformScripts'
+                sh 'pwd'
             }
         }
     }
