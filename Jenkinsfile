@@ -12,7 +12,7 @@ pipeline {
                 sh 'npm build'
             }
         }
-    /*stage('Deploy'){
+    stage('Deploy'){
         agent any
         steps {
             script {
@@ -22,7 +22,7 @@ pipeline {
                     }   
                 }
             }
-        }*/
+        }
         stage('AWS Deployment'){
             agent any
             steps{
