@@ -4,7 +4,7 @@ pipeline {
     }
     agent none
     stages {
-        /*stage('Build') {
+        stage('Build') {
             agent { dockerfile true }
             steps {
                 sh 'pwd'
@@ -21,12 +21,13 @@ pipeline {
                     }   
                 }
             }
-        }*/
+        }
         stage('AWS Deployment'){
             agent any
             steps{
                 dir('TerraformScripts'){
-                sh 'pwd'
+                sh 'terraform init'
+                sh 'terraform apply'
                 }
             }
         }
