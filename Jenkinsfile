@@ -27,7 +27,7 @@ pipeline {
             agent any
             steps{
                 script{
-                    aws.withCredentials(awsCredentials){
+                    withCredentials(awsCredentials){
                 dir('TerraformScripts'){
                 sh 'terraform init'
                 sh 'terraform apply'
