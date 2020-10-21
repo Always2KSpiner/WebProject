@@ -17,7 +17,7 @@ variable "az_count" {
 
 variable "app_image" {
   description = "Docker image to run in the ECS cluster"
-  default     = "always2kspiner/webproject:latest"
+  default     = "always2kspiner/webproject:32"
 }
 
 variable "app_port" {
