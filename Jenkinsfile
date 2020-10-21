@@ -23,7 +23,7 @@ pipeline {
                 }
             }
         }
-        stage('AWS Deployment'){
+        /*stage('AWS Deployment'){
             agent any
             steps{
                 script{
@@ -35,6 +35,6 @@ pipeline {
                     }
                 }
             }
-        }
+        }*/
     }
 }
